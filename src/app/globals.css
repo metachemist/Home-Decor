@@ -1,0 +1,761 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Karma:wght@300;400;500;600;700&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Karma, Petrona, sans-serif;
+  background-color: rgb(239, 233, 227);
+  color: rgb(16, 15, 15);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(7, 7, 7);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+
+.p {
+  font-weight: 100;
+}
+
+.header {
+  background-color: rgb(218, 205, 193);
+  color: rgb(10, 11, 11);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.header nav {
+  display: flex;
+  gap: 40px;
+  padding-right: 20px;
+}
+
+.header nav a {
+  color: rgb(10, 11, 11);
+  font-weight: bold;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+  color: rgb(7, 7, 7);
+}
+
+/*****************************   Hero   ***********************************/
+
+.hero-container {
+  width: 100%;
+  height: 590px;
+  background-color: rgb(124, 9, 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 80%;
+  background-color: rgb(218, 205, 193);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 4px 10px rgba(16, 16, 16, 0.2);
+}
+
+.hero-left-div {
+  text-align: center;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 24px; /* Optional margin for spacing */
+}
+
+.styled-image {
+  border-radius: 15px; /* Adjust the rounding as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.styled-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+h1 {
+  font-size: 32px;
+}
+p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.hero-button {
+  font-weight: 900;
+  margin-top: 30px;
+  background-color: rgb(184, 51, 33);
+  color: rgb(10, 11, 11);
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* ============================= Decor  ====================================*/
+.decors {
+  margin-top: 10px;
+  margin: 20px;
+  gap: 40px;
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  padding: 40px;
+  background-color: rgba(178, 157, 133, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.decor-card {
+  color: rgb(253, 254, 255);
+  width: 100%;
+  background-color: rgb(124, 9, 7);;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(0 0 0 0.2);
+  text-align: center;
+}
+
+.decor-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.decor-card h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.decor-card p {
+  margin-top: 3px;
+  font-size: 14px;
+}
+
+.decor-card .price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.decor-card button {
+  margin-top: 10px;
+  font-weight: bold;
+  background-color: rgb(247, 240, 233);
+  color: rgb(10, 11, 11);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.decor-card button:hover {
+  background-color: rgb(205, 186, 160);
+}
+
+.decor-card:hover img {
+  transform: scale(1.1);
+}
+
+/*=============Contact Form =============================*/
+
+/* Container with background image */
+.contact-div {
+  position: relative;
+  width: 100%; /* Full width container */
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+/* Background image styling */
+.background-image {
+  position: absolute;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  width: 100%; /* Covers the entire container */
+  height: 100%; /* Matches container height */
+  object-fit: cover; /* Ensures the image scales nicely */
+  z-index: -1; /* Places image behind other content */
+}
+
+/* Form styling */
+.contact-form {
+  position: relative;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(
+    245,
+    233,
+    219,
+    0.9
+  ); /* Slight transparency for the form background */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: -1; /* Ensures form is above the background image */
+}
+
+/* Headline animation or styling */
+.fade-in {
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  font-weight: bold;
+  background-color: rgb(190, 133, 115);
+  color: rgb(10, 11, 11);
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: rgb(205, 186, 160);
+}
+
+/* ============================= Footer ====================================*/
+
+footer {
+  background-color: rgb(205, 186, 160);
+  color: rgb(10, 11, 11);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-para {
+  margin: 0;
+}
+
+/* Responsive Styles for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+  .hero-container {
+    height: auto;
+    padding: 40px;
+  }
+
+  .hero-box {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .hero-left-div {
+    width: 100%;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .image-container {
+    margin: 20px auto;
+  }
+
+  h1 {
+    margin-left: 15%;
+    font-size: 28px;
+  }
+
+  p {
+    margin-left: 15%;
+    font-size: 16px;
+  }
+
+  .hero-button {
+    margin-left: 35%;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Responsive Styles for Very Small Screens (320px) */
+@media (max-width: 320px) {
+  .hero-container {
+    padding: 20px; /* Reduced padding for smaller screens */
+    margin-left: 0; /* No margin for very small screens */
+  }
+
+  .hero-box {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px; /* Compact padding for tight spaces */
+  }
+
+  h1 {
+    margin-left: 10%; /* Adjusted for small screen spacing */
+    font-size: 20px; /* Smaller font size */
+  }
+
+  p {
+    margin-left: 10%; /* Matches the heading alignment */
+    font-size: 12px; /* Reduced font size for better readability */
+  }
+
+  .hero-button {
+    margin-left: 25%; /* Centered button for narrow screens */
+    padding: 6px 10px; /* Smaller button dimensions */
+    font-size: 10px; /* Compact font size */
+  }
+
+  .image-container {
+    margin: 10px auto; /* Reduced margin for tighter layout */
+  }
+
+  .styled-image {
+    width: 90%; /* Reduce image width slightly for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Slightly smaller rounding for small screens */
+  }
+}
+
+/* ============================== Fade-in-Animation ===================================*/
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in- {
+  opacity: 0;
+  animation: fade-in 1s ease-in-out;
+}
+
+/* ============================== About ===================================*/
+
+.about-container {
+  width: 100%;
+  height: 590px;
+  background-color: rgb(124, 9, 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 80%;
+  background-color: rgb(218, 205, 193);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 4px 10px rgba(16, 16, 16, 0.2);
+}
+.about-right-div {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 24px;
+}
+
+.about-image2-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 24px;
+}
+
+.about-styled-image,
+.about-styled2-image {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.about-styled-image:hover {
+  transform: scale(1.05);
+}
+.about-styled2-image:hover {
+  transform: scale(1.05);
+}
+h2 {
+  font-size: 32px;
+}
+.about-para {
+  text-justify: inter-cluster;
+  margin: 10px;
+  padding: 20px;
+  font-size: 14px;
+  word-spacing: 1px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/* Responsive Styles for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header .logo {
+    margin-bottom: 10px;
+  }
+  .header nav {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .about-container {
+    height: auto;
+    padding: 40px;
+  }
+
+  .about-box {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .about-right-div {
+    width: 100%;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .about-image-container {
+    margin: 20px auto;
+  }
+  .about-image2-container {
+    margin: 20px auto;
+  }
+
+  h2 {
+    margin-left: 15%;
+    font-size: 28px;
+  }
+
+  .about-para {
+    margin-left: 15%;
+    font-size: 16px;
+  }
+
+  .about-hero-button {
+    margin-left: 80rem;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .contact-form {
+    display: flex; /* Ensures child elements align properly */
+    flex-direction: column; /* Aligns items in a column */
+    gap: 15px; /* Adds spacing between inputs */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* Removes any default margin */
+  }
+
+  .decors {
+    grid-template-columns: 1fr;
+    margin: 20px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Element starts invisible */
+    transform: translateY(20px); /* Slight downward movement */
+  }
+  to {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Moves to original position */
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out; /* Animation duration and easing */
+}
+
+/* Responsive Styles for Mobile Screens */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: row; /* Keep header in a single row */
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px; /* Small padding for compact height */
+  }
+
+  .header .logo {
+    padding-top: 8px;
+    font-size: 12px; /* Smaller font size for logo */
+  }
+
+  .header nav {
+    flex-direction: row; /* Nav items stay in a row */
+    gap: 4px; /* Reduce space between links */
+    font-size: 10px; /* Smaller font size for nav links */
+  }
+
+  .cart-icon {
+    font-size: 16px; /* Further reduce icon size */
+    margin: 0; /* Remove extra margin */
+  }
+
+  .about-container {
+    padding: 20px;
+    margin-left: 15px;
+  }
+
+  .about-box {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+  }
+
+  h2 {
+    margin-left: 15%;
+    font-size: 24px;
+  }
+
+  .about-para {
+    margin-left: 15%;
+    font-size: 14px;
+  }
+
+  .about-button {
+    margin-bottom: 30px;
+    margin-left: 35%;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .about-container {
+    margin: 15px auto;
+  }
+  .about-image-container {
+    margin: 20px auto;
+  }
+  .about-image2-container {
+    margin: 20px auto;
+  }
+
+  .about-styled-image,
+  .about-styled2-image {
+    max-width: 250px;
+  }
+
+  .decors {
+    grid-template-columns: 1fr;
+    margin: 20px;
+  }
+
+  .contact-form {
+    width: 80%;
+
+    display: flex; /* Ensures child elements align properly */
+    flex-direction: column; /* Aligns items in a column */
+    gap: 15px; /* Adds spacing between inputs */
+    margin-top: 22px;
+    margin-bottom: 22px;
+    margin-left: 30px;
+    margin-right: 30px;
+    /* Removes any default margin */
+  }
+  .contact-button {
+    margin-top: 30px;
+
+    font-size: 12px;
+  }
+
+  footer {
+    padding: 6px;
+    text-align: center; /* Center footer text */
+  }
+  footer p {
+    font-size: 10px; /* Smaller font size for footer text */
+  }
+}
+
+/* Responsive Styles for Mobile Screens */
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 20px;
+    margin-left: 15px;
+  }
+
+  .hero-box {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+  }
+
+  h1 {
+    margin-left: 15%;
+    font-size: 24px;
+  }
+
+  p {
+    margin-left: 15%;
+    font-size: 14px;
+  }
+
+  .hero-button {
+    margin-bottom: 30px;
+    margin-left: 35%;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .image-container {
+    margin: 15px auto;
+  }
+
+  .styled-image {
+    width: 100%; /* Full width for small screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Responsive Styles for Very Small Screens (320px) */
+@media (max-width: 320px) {
+  .header {
+    flex-direction: row; /* Keep header in a single row */
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px; /* Small padding for compact height */
+  }
+
+  .header .logo {
+    padding-top: 8px;
+    font-size: 12px; /* Smaller font size for logo */
+  }
+
+  .header nav {
+    flex-direction: row; /* Nav items stay in a row */
+    gap: 4px; /* Reduce space between links */
+    font-size: 10px; /* Smaller font size for nav links */
+  }
+
+  .cart-icon {
+    font-size: 16px; /* Further reduce icon size */
+    margin: 0; /* Remove extra margin */
+  }
+
+  .about-container {
+    padding: 20px;
+    margin-left: 0;
+  }
+
+  .about-box {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+
+  h2 {
+    margin-left: 30%;
+    font-size: 20px;
+  }
+
+  .about-para {
+    margin-left: 10%;
+    font-size: 12px;
+  }
+
+  .about-button {
+    margin-left: 35%;
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+
+  .about-image-container {
+    margin: 10px auto;
+  }
+  .about-image2-container {
+    margin: 10px auto;
+  }
+
+  .about-styled-image {
+    max-width: 200px; /* Smaller size for very small screens */
+  }
+
+  .about-styled2-image {
+    max-width: 200px;
+  }
+
+  .decors {
+    grid-template-columns: 1fr;
+    margin: 20px;
+  }
+
+  footer {
+    padding: 6px;
+    text-align: center; /* Center footer text */
+  }
+  footer p {
+    font-size: 10px; /* Smaller font size for footer text */
+  }
+}
